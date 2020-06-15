@@ -264,8 +264,8 @@
 			var/list/potential_gasTrap = range(M.gastier,src)
 			for(var/gasTrap in potential_gasTrap)
 				if(istype(gasTrap, /obj/effect/alien/resin/trap))
-					var/obj/effect/alien/resin/trap/gasTrap = gasTrap
-					if(gasTrap.gastrap !=null)
+					var/obj/effect/alien/resin/trap/actualGasTrap = gasTrap
+					if(actualGasTrap.gastrap !=null)
 						to_chat(M, "<span class='xenonotice'>There are too many gas traps nearby!</span>")
 						return
 
