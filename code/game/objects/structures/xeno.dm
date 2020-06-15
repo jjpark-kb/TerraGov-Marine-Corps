@@ -261,8 +261,8 @@
 			if(M.plasma_stored < 50)
 				to_chat(M, "<span class='xenonotice'>We do not have enough plasma.</span>")
 				return
-			var/list/potential_gasTrap = range(X,src)
-			for(gasTrap in potential_gasTrap)
+			var/list/potential_gasTrap = range(M.gastier,src)
+			for(var/gasTrap in potential_gasTrap)
 				if(isType(gasTrap, /obj/effect/alien/resin/trap))
 					if(gasTrap.gastrap !=null)
 						to_chat(M, "<span class='xenonotice'>There are too many gas traps nearby!</span>")
